@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="accessControl.js"></script>
+
+         <!-- Logo -->
+        <header>
+            <img src="logo.png" alt="Company Logo" width="250">
+        </header>
+    <meta charset="UTF-8">
+    <title>Air Shipment DSR Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            cursor: pointer;
+        }
+        /* Highlight for "Air Shipment Form" */
+        h1 {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+        }
+        /* Differentiate Section Headers */
+        .section-header {
+            background-color: #b0b7b9;
+            color:white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px; /* Updated font size */
+            font-weight: bold; /* Added font-weight */
+        }
+        /* Differentiate Form Labels */
+        .form-label {
+            font-weight: bold;
+            font-size: 16px; /* Updated font size */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+    <h1>Air Shipment DSR Form</h1>
+    <main class="container">
+        <div class="progress sticky-top">
+            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+        </div>
+        
+        <form id="myForm">
+        <section>
+            <!-- Basic Information -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#basicInfo">
+                    Basic Information
+                </div>
+                <div class="card-body collapse" id="basicInfo">
+                    <!-- <div class="form-group">
+                        <label class="form-label" for="sno">Serial No</label>
+                        <input type="text" class="form-control" id="sno">
+                    </div> -->
+                    <div class="form-group">
+                        <label class="form-label" for="ponumber">PO Number</label>
+                        <input type="text" class="form-control" id="ponumber">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- Supplier and Consignee -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#supplierConsignee">
+                    Supplier and Consignee
+                </div>
+                <div class="card-body collapse" id="supplierConsignee">
+                    <div class="form-group">
+                        <label class="form-label" for="suppliername">Supplier Name</label>
+                        <input type="text" class="form-control" id="suppliername" >
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="consignee">Consignee</label>
+                        <input type="text" class="form-control" id="consignee" >
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- Dates -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#dates">
+                    Dates
+                </div>
+                <div class="card-body collapse" id="dates">
+                    <!-- Add more date fields here -->
+                    <div class="form-group">
+                        <label class="form-label" for="bookingreceiveddate">Booking Received Date</label>
+                        <input type="date" class="form-control" id="bookingreceiveddate">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="bkgdate">BKG Date</label>
+                        <input type="date" class="form-control" id="bkgdate">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cargoreadiness">Cargo Readiness</label>
+                        <input type="date" class="form-control" id="cargoreadiness">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="pickupdate">PickUp Date</label>
+                        <input type="date" class="form-control" id="pickupdate">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="warehousercvd">Warehouse RCVD</label>
+                        <input type="date" class="form-control" id="warehousercvd">
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- Origin and Loading -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#originTerms">
+                    Origin and Terms
+                </div>
+                <div class="card-body collapse" id="originTerms">
+                    <div class="form-group">
+                        <label class="form-label" for="countryoforigin">Country of Origin</label>
+                        <input type="text" class="form-control" id="countryoforigin">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="terms">Terms</label>
+                        <input type="text" class="form-control" id="terms">
+                    </div>
+                    <!-- Add more fields here -->
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- HAWB NO, MAWB, PKGS -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#hawbmawbpkgs">
+                    HAWB NO,MAWB & PKGS
+                </div>
+                <div class="card-body collapse" id="hawbmawbpkgs">
+                    <div class="form-group">
+                        <label class="form-label" for="hawbno">HAWB NO</label>
+                        <input type="text" class="form-control" id="hawbno">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="mawb">MAWB</label>
+                        <input type="text" class="form-control" id="mawb">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="pkgs">PKGS</label>
+                        <input type="text" class="form-control" id="pkgs">
+                    </div>
+                    <!-- Add more fields here -->
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- GRS WT, CHG WT -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#grschg">
+                    GRS WT & CHG WT
+                </div>
+                <div class="card-body collapse" id="grschg">
+                    <div class="form-group">
+                        <label class="form-label" for="grswt">GRS WT</label>
+                        <input type="text" class="form-control" id="grswt">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="chgwt">CHG WT</label>
+                        <input type="text" class="form-control" id="chgwt">
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- FLT Details -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#fltDetails">
+                    FLT Details
+                </div>
+                <div class="card-body collapse" id="fltDetails">
+                    <div class="form-group">
+                        <label class="form-label" for="fltdetails">FLT Details</label>
+                        <input type="text" class="form-control" id="fltdetails">
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+            <!-- ETD, ETA, Revised ETD, Revised ETA, ATA -->
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#etdetaata">
+                    ETA,ETD & ATA
+                </div>
+                <div class="card-body collapse" id="etdetaata">
+                    <div class="form-group">
+                        <label class="form-label" for="etd">ETD</label>
+                        <input type="date" class="form-control" id="etd">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="eta">ETA</label>
+                        <input type="date" class="form-control" id="eta">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="revisedetd">Revised ETD</label>
+                        <input type="date" class="form-control" id="revisedetd">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="revisedeta">Revised ETA</label>
+                        <input type="date" class="form-control" id="revisedeta">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="ata">ATA</label>
+                        <input type="text" class="form-control" id="ata">
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+            <div class="card">
+                <div class="section-header" data-toggle="collapse" data-target="#remarkstab">
+                    Prealert DTD & Remarks
+                </div>
+                <div class="card-body collapse" id="remarkstab">
+                    <div class="form-group">
+                        <label class="form-label" for="prealertdtd">Prealert DTD</label>
+                        <input type="date" class="form-control" id="prealertdtd">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="remarks">Remarks</label>
+                        <input type="text" class="form-control" id="remarks">
+                    </div>
+                </div>
+            </div>
+        </section>
+               <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            
+        </form>
+        <footer class="footer">
+            <p>All Rights Reserved &copy; 2023</p>
+          </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="airscripts.js"></script>
+
+</body>
+</html>
